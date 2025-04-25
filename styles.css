@@ -1,0 +1,266 @@
+/* Base Styles */
+:root {
+    --primary-color: #046a38; /* Pakistan green */
+    --secondary-color: #01411c;
+    --accent-color: #f8f8f8;
+    --text-color: #333;
+    --light-text: #666;
+    --error-color: #e74c3c;
+    --jazz-color: #ed1c24;
+    --zong-color: #5bc236;
+    --ufone-color: #ffcb05;
+    --telenor-color: #22b573;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+/* Search Container */
+.search-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.input-group button {
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.input-group button:hover {
+    background-color: var(--secondary-color);
+}
+
+.note {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Result Container */
+.result-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-header h2 {
+    color: var(--primary-color);
+}
+
+.result-header button {
+    padding: 8px 15px;
+    background-color: var(--light-text);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.result-header button:hover {
+    background-color: var(--text-color);
+}
+
+.result-content {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.sim-detail {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.sim-detail .label {
+    font-weight: bold;
+    width: 150px;
+    color: var(--primary-color);
+}
+
+.sim-detail .value {
+    flex: 1;
+}
+
+/* Network Info */
+.network-info {
+    margin-bottom: 30px;
+}
+
+.network-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.network-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.network-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.network-card:hover {
+    transform: translateY(-5px);
+}
+
+.network-card h4 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.network-card p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+/* Network specific colors */
+.jazz {
+    border-top: 4px solid var(--jazz-color);
+}
+
+.zong {
+    border-top: 4px solid var(--zong-color);
+}
+
+.ufone {
+    border-top: 4px solid var(--ufone-color);
+}
+
+.telenor {
+    border-top: 4px solid var(--telenor-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+footer .disclaimer {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .input-group button {
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .network-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container, .result-container {
+        padding: 20px;
+    }
+
+    .sim-detail {
+        flex-direction: column;
+    }
+
+    .sim-detail .label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
